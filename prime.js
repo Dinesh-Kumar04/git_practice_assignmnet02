@@ -1,15 +1,16 @@
 function checkPrime(num){
-    let sun1 = 0
-    for(let i = 1; i <= num; i++){
+    for(let i = 2; i <= Math.sqrt(num); i++){
         if(num%i==0){
-            sun1++;
+            return false;
         }
-    }
-    if(sun1 > 2){
-        console.log(`${sum1} is a prime number`)
-    }else{
-        console.log(`${sum1} is a not prime number`)
+        return true;
     }
 }
 
-checkPrime(4)
+let number = 12;
+let result = checkPrime(number);
+if(result==true){
+    console.log(`${number} is a prime number`)
+}else{
+    console.log(`${number} is not a prime number`)
+}
